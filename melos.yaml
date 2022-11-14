@@ -1,0 +1,14 @@
+name: bytebinder
+
+packages:
+  - server/**
+  - app/**
+
+command:
+  bootstrap: 
+    usePubspecOverrides: true
+
+scripts:
+  generateapi:
+    run: |
+      npx openapi-generator-cli generate -g dart -i ./bytebinder-openapi.yaml -o ./api
